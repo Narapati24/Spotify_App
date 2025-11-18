@@ -13,9 +13,11 @@ Future<void> main() async {
     storageDirectory:
         kIsWeb
             ? HydratedStorageDirectory.web
-            : HydratedStorageDirectory((await getTemporaryDirectory()).path),
+            : HydratedStorageDirectory(
+              (await getApplicationDocumentsDirectory()).path,
+            ),
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

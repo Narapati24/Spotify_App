@@ -19,7 +19,7 @@ class ChooseModePage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.all(40),
+            padding: const EdgeInsets.all(40),
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(AppImages.chooseModeBG),
