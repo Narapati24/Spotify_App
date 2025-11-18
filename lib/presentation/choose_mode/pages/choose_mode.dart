@@ -36,7 +36,7 @@ class ChooseModePage extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   child: SvgPicture.asset(AppVectors.logo),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   'Choose Mode',
                   style: TextStyle(
@@ -132,7 +132,9 @@ class ChooseModePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SignupOrSigninPage(),
+                        builder:
+                            (BuildContext context) =>
+                                const SignupOrSigninPage(),
                       ),
                     );
                   },

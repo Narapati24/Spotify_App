@@ -32,7 +32,7 @@ class GetStartedPage extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   child: SvgPicture.asset(AppVectors.logo),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   'Enjoy Listening To Music',
                   style: TextStyle(
@@ -57,7 +57,8 @@ class GetStartedPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => ChooseModePage(),
+                        builder:
+                            (BuildContext context) => const ChooseModePage(),
                       ),
                     );
                   },
