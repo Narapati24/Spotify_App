@@ -6,7 +6,7 @@ import 'package:spotify_clone/core/configs/assets/app_vectors.dart';
 import 'package:spotify_clone/data/models/auth/signin_user_req.dart';
 import 'package:spotify_clone/domain/usecases/auth/signin.dart';
 import 'package:spotify_clone/presentation/auth/pages/signup.dart';
-import 'package:spotify_clone/presentation/root/pages/root.dart';
+import 'package:spotify_clone/presentation/home/pages/home.dart';
 import 'package:spotify_clone/service_locator.dart';
 
 class SigninPage extends StatelessWidget {
@@ -51,7 +51,7 @@ class SigninPage extends StatelessWidget {
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => RootPage(),
+                        builder: (BuildContext context) => HomePage(),
                       ),
                       (route) => false,
                     );
@@ -86,6 +86,7 @@ class SigninPage extends StatelessWidget {
   Widget _passwordField(BuildContext context) {
     return TextField(
       controller: _passwordController,
+      obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
       ).applyDefaults(Theme.of(context).inputDecorationTheme),
